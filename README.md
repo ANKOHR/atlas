@@ -39,7 +39,7 @@ py -3.12 -m atlas "Should a European robotics startup build its own vision-langu
 
 Normal runs are written to `runs/<UTC timestamp>-<question slug>/`. Use `--output-dir path` to choose an explicit output directory, `--max-searches 6` to bound searches, and `--max-pages 10` to bound page fetches. Each run writes `brief.md`, `report.md`, `evidence.json`, and `decomposition.json`. A numeric evidence chart is written when recognized numbers exist.
 
-The worked example and its live-run artifacts are under `examples/vla-robotics/`. During this build DuckDuckGo returned a human verification challenge on the first query, so the saved sample is explicitly inconclusive and contains no source citations. Rerun the CLI when the search endpoint permits requests to populate evidence.
+The worked example and its live-run artifacts are under `examples/vla-robotics/`. The saved sample was produced after adding search fallbacks: it holds 75 claims extracted from 10 fetched arXiv abstract pages, with brief.md, report.md, evidence.json, and a quantified evidence chart.
 
 ## Pipeline stages
 
