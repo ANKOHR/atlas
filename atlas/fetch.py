@@ -86,7 +86,13 @@ class PageFetcher:
         if title_node:
             title = title_node.get("content", "") if title_node.name == "meta" else title_node.get_text(" ", strip=True)
         root = soup.find("article") or soup.find("main") or soup.body or soup
-        paragraphs = [p.get_text(" ", strip=True) for p in root.select("p")]
+        abstract_node = soup.select_one("blockquote.abstract")
+        if abstract_node:
+            abstract_text = abstract_node.get_text(" ", strip=True)
+            abstract_text = re.sub(r"^Abstract:\s*", "", abstract_text, flags=re.IGNORECASE)
+            paragraphs = [abstract_text]
+        else:
+            paragraphs = [p.get_text(" ", strip=True) for p in root.select("p")]
         paragraphs = [re.sub(r"\s+", " ", p) for p in paragraphs if len(p.strip()) >= 35]
         if len(" ".join(paragraphs)) < 200:
             paragraphs = [re.sub(r"\s+", " ", p.get_text(" ", strip=True)) for p in root.select("h1, h2, h3, li")]

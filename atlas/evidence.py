@@ -9,7 +9,7 @@ from .fetch import FetchedPage
 
 SENTENCE_RE = re.compile(r"(?<=[.!?])\s+(?=[A-Z0-9\"'(])")
 NUMBER_RE = re.compile(
-    r"(?P<currency>[$€£])?\s*(?P<value>-?\d[\d,]*(?:\.\d+)?)\s*(?P<unit>%|percent(?:age points?)?|years?|months?|weeks?|days?|hours?|minutes?|seconds?|billion|million|thousand|kWh|MW|GW|USD|EUR|GBP|robots?|parameters?|datasets?|companies|workers|employees|models|tokens|degrees?)?\b",
+    r"(?<![A-Za-z0-9_-])(?P<currency>[$€£])?\s*(?P<value>-?\d[\d,]*(?:\.\d+)?)\s*(?P<unit>\\?%|percent(?:age points?)?|years?|months?|weeks?|days?|hours?|minutes?|seconds?|billion|million|thousand|kWh|MW|GW|USD|EUR|GBP|robots?|parameters?|datasets?|companies|workers|employees|models|tokens|degrees?|-?DoF)?(?![A-Za-z0-9_])",
     re.I,
 )
 INFERENCE_CUES = ("may", "might", "could", "likely", "unlikely", "suggests", "indicates", "implies", "appears", "expected", "projected", "forecast", "we believe", "we expect")
@@ -29,7 +29,8 @@ def _kind(sentence: str, quoted: bool) -> str:
 
 def _numbers(sentence: str) -> list[dict[str, Any]]:
     found = []
-    for match in NUMBER_RE.finditer(sentence):
+    numeric_text = re.sub(r"\(\s*\d+\s*\)", " ", sentence)
+    for match in NUMBER_RE.finditer(numeric_text):
         raw_value = match.group("value").replace(",", "")
         try:
             value: int | float = float(raw_value)
@@ -38,6 +39,9 @@ def _numbers(sentence: str) -> list[dict[str, Any]]:
         except ValueError:
             continue
         unit = match.group("unit") or "count"
+        unit = unit.replace("\\", "")
+        if unit.lower().lstrip("-") == "dof":
+            unit = "DoF"
         currency = match.group("currency")
         if currency:
             unit = {"$": "USD", "€": "EUR", "£": "GBP"}[currency]

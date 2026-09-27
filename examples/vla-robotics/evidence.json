@@ -1,7 +1,7 @@
 {
   "atlas_version": "0.1.0",
-  "run_id": "20260927T135032Z-should-a-european-robotics-startup-build-its-own",
-  "run_date": "2026-09-27T13:50:32+00:00",
+  "run_id": "20260927T141906Z-should-a-european-robotics-startup-build-its-own",
+  "run_date": "2026-09-27T14:19:06+00:00",
   "decomposition": {
     "question": "Should a European robotics startup build its own vision-language-action model, fine-tune an existing model, or rely on external models over the next three years?",
     "decision": "Should a European robotics startup build its own vision-language-action model, fine-tune an existing model, or rely on external models over the next three years",
@@ -63,33 +63,1039 @@
       }
     ]
   },
-  "search_results": [],
+  "search_results": [
+    {
+      "url": "https://arxiv.org/abs/2607.15330v2",
+      "title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+      "snippet": "We present Xiaomi-Robotics-1, a foundational vision-language-action (VLA) model capable of (1) following diverse language instructions to perform a wide range of mobile manipulation tasks in unseen environments out-of-the-box, and (2) efficiently adapting to novel downstream tasks with minimal fine-tuning data. We propose a two-stage training recipe consisting of pre-training and post-training. During pre-training, we imbue the model with broad and generalizable action-generation capabilities by training on over 100k hours of real-world manipulation trajectories collected via UMI devices. Crucially, we develop a scalable auto-labeling pipeline that annotates trajectory clips with natural languages describing scene state transitions, providing rich and precise conditioning for action learning. During post-training, we aim to align these capabilities with robot embodiments and imperative instructions that humans naturally use to prompt robots. Extensive experiments demonstrate strong scaling behavior. Xiaomi-Robotics-1 consistently improves with increased data scales and model sizes during pre-training. This scaling behavior directly transfers to post-training, where a stronger pre-training model yields better out-of-the-box real-robot performance in unseen environments. Furthermore, Xiaomi-Robotics-1 serves as a strong robot foundation policy that can be efficiently fine-tuned on complex, dexterous tasks with high data efficiency. Across multiple simulation benchmarks, Xiaomi-Robotics-1 outperforms state-of-the-art methods. Notably, it establishes a new state-of-the-art with a 57.4% success rate on RoboCasa365, surpassing the previous best of 46.6%. Furthermore, it achieves an average score of 20.07 on RoboDojo, significantly outperforming the prior state-of-the-art (13.07). Code and model checkpoints will be released. Project page: https://robotics.xiaomi.com/xiaomi-robotics-1.html"
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.10797v1",
+      "title": "Compositional Context Fine-Tuning Vision-Language Model for Complex Assembly Action Understanding from Videos",
+      "snippet": "Assembly action understanding is a key enabler for effective human-robot collaborative assembly, yet it remains challenging due to subtle motions and fine-grained hand-object interactions. We adapt vision-language models (VLMs) to this challenging domain with Compositional Context Fine-Tuning (CCFT), a method that decomposes assembly actions into semantic elements (Verb, Object, Tool) and fine-tunes VLMs to recognize each action element using templated question-answering pairs. This approach ensures near-deterministic outputs. To enable efficient and effective multi-task learning under limited data, a Layer-Partitioned Alternating Training (LP-AT) method is presented, which assigns distinct model layers to recognize specific action elements through element-specific low-rank adapters. LP-AT alternates weight updates across element-specific adapters, reducing cross-task interference while enabling per-adapter hyperparameter optimization. Furthermore, we create HA-ViD-VQA and IKEA-ASM-VQA datasets from existing assembly video datasets. Extensive experiments on these datasets demonstrate that our method consistently outperforms strong action recognition baselines while providing interpretable element-level predictions that can support diverse downstream applications."
+    },
+    {
+      "url": "https://arxiv.org/abs/2307.15818v1",
+      "title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control",
+      "snippet": "We study how vision-language models trained on Internet-scale data can be incorporated directly into end-to-end robotic control to boost generalization and enable emergent semantic reasoning. Our goal is to enable a single end-to-end trained model to both learn to map robot observations to actions and enjoy the benefits of large-scale pretraining on language and vision-language data from the web. To this end, we propose to co-fine-tune state-of-the-art vision-language models on both robotic trajectory data and Internet-scale vision-language tasks, such as visual question answering. In contrast to other approaches, we propose a simple, general recipe to achieve this goal: in order to fit both natural language responses and robotic actions into the same format, we express the actions as text tokens and incorporate them directly into the training set of the model in the same way as natural language tokens. We refer to such category of models as vision-language-action models (VLA) and instantiate an example of such a model, which we call RT-2. Our extensive evaluation (6k evaluation trials) shows that our approach leads to performant robotic policies and enables RT-2 to obtain a range of emergent capabilities from Internet-scale training. This includes significantly improved generalization to novel objects, the ability to interpret commands not present in the robot training data (such as placing an object onto a particular number or icon), and the ability to perform rudimentary reasoning in response to user commands (such as picking up the smallest or largest object, or the one closest to another object). We further show that incorporating chain of thought reasoning allows RT-2 to perform multi-stage semantic reasoning, for example figuring out which object to pick up for use as an improvised hammer (a rock), or which type of drink is best suited for someone who is tired (an energy drink)."
+    },
+    {
+      "url": "https://arxiv.org/abs/2505.20503v2",
+      "title": "Embodied AI with Foundation Models for Mobile Service Robots: A Systematic Review",
+      "snippet": "Rapid advancements in foundation models, including Large Language Models, Vision-Language Models, Multimodal Large Language Models, and Vision-Language-Action Models, have opened new avenues for embodied AI in mobile service robotics. By combining foundation models with the principles of embodied AI, where intelligent systems perceive, reason, and act through physical interaction, mobile service robots can achieve more flexible understanding, adaptive behavior, and robust task execution in dynamic real-world environments. Despite this progress, embodied AI for mobile service robots continues to face fundamental challenges related to the translation of natural language instructions into executable robot actions, multimodal perception in human-centered environments, uncertainty estimation for safe decision-making, and computational constraints for real-time onboard deployment. In this paper, we present the first systematic review focused specifically on the integration of foundation models in mobile service robotics. We analyze how recent advances in foundation models address these core challenges through language-conditioned control, multimodal sensor fusion, uncertainty-aware reasoning, and efficient model scaling. We further examine real-world applications in domestic assistance, healthcare, and service automation, highlighting how foundation models enable context-aware, socially responsive, and generalizable robot behaviors. Beyond technical considerations, we discuss ethical, societal, and human-interaction implications associated with deploying foundation model-enabled service robots in human environments. Finally, we outline future research directions emphasizing reliability and lifelong adaptation, privacy-aware and resource-constrained deployment, and governance and human-in-the-loop frameworks required for safe, scalable, and trustworthy mobile service robotics."
+    },
+    {
+      "url": "https://arxiv.org/abs/2504.18471v2",
+      "title": "Action Flow Matching for Continual Robot Learning",
+      "snippet": "Continual learning in robotics seeks systems that can constantly adapt to changing environments and tasks, mirroring human adaptability. A key challenge is refining dynamics models, essential for planning and control, while addressing issues such as safe adaptation, catastrophic forgetting, outlier management, data efficiency, and balancing exploration with exploitation -- all within task and onboard resource constraints. Towards this goal, we introduce a generative framework leveraging flow matching for online robot dynamics model alignment. Rather than executing actions based on a misaligned model, our approach refines planned actions to better match with those the robot would take if its model was well aligned. We find that by transforming the actions themselves rather than exploring with a misaligned model -- as is traditionally done -- the robot collects informative data more efficiently, thereby accelerating learning. Moreover, we validate that the method can handle an evolving and possibly imperfect model while reducing, if desired, the dependency on replay buffers or legacy model snapshots. We validate our approach using two platforms: an unmanned ground vehicle and a quadrotor. The results highlight the method's adaptability and efficiency, with a record 34.2\\% higher task success rate, demonstrating its potential towards enabling continual robot learning. Code: https://github.com/AlejandroMllo/action_flow_matching."
+    },
+    {
+      "url": "https://arxiv.org/abs/2602.03973v1",
+      "title": "VLS: Steering Pretrained Robot Policies via Vision-Language Models",
+      "snippet": "Why do pretrained diffusion or flow-matching policies fail when the same task is performed near an obstacle, on a shifted support surface, or amid mild clutter? Such failures rarely reflect missing motor skills; instead, they expose a limitation of imitation learning under train-test shifts, where action generation is tightly coupled to training-specific spatial configurations and task specifications. Retraining or fine-tuning to address these failures is costly and conceptually misaligned, as the required behaviors already exist but cannot be selectively adapted at test time. We propose Vision-Language Steering (VLS), a training-free framework for inference-time adaptation of frozen generative robot policies. VLS treats adaptation as an inference-time control problem, steering the sampling process of a pretrained diffusion or flow-matching policy in response to out-of-distribution observation-language inputs without modifying policy parameters. By leveraging vision-language models to synthesize trajectory-differentiable reward functions, VLS guides denoising toward action trajectories that satisfy test-time spatial and task requirements. Across simulation and real-world evaluations, VLS consistently outperforms prior steering methods, achieving a 31% improvement on CALVIN and a 13% gain on LIBERO-PRO. Real-world deployment on a Franka robot further demonstrates robust inference-time adaptation under test-time spatial and semantic shifts. Project page: https://vision-language-steering.github.io/webpage/"
+    },
+    {
+      "url": "https://arxiv.org/abs/2603.03897v3",
+      "title": "IROSA: Interactive Robot Skill Adaptation using Natural Language",
+      "snippet": "Foundation models have demonstrated impressive capabilities across diverse domains, while imitation learning provides principled methods for robot skill adaptation from limited data. Combining these approaches holds significant promise for direct application to robotics, yet this combination has received limited attention, particularly for industrial deployment. We present a novel framework that enables open-vocabulary skill adaptation through a tool-based architecture, maintaining a protective abstraction layer between the language model and robot hardware. Our approach leverages pre-trained LLMs to select and parameterize specific tools for adapting robot skills without requiring fine-tuning or direct model-to-robot interaction. We demonstrate the framework on a 7-DoF torque-controlled robot performing an industrial bearing ring insertion task, showing successful skill adaptation through natural language commands for speed adjustment, trajectory correction, and obstacle avoidance while maintaining safety, transparency, and interpretability."
+    },
+    {
+      "url": "https://arxiv.org/abs/2309.06611v3",
+      "title": "Enabling the Deployment of Any-Scale Robotic Applications in Microservice Architectures through Automated Containerization",
+      "snippet": "In an increasingly automated world -- from warehouse robots to self-driving cars -- streamlining the development and deployment process and operations of robotic applications becomes ever more important. Automated DevOps processes and microservice architectures have already proven successful in other domains such as large-scale customer-oriented web services (e.g., Netflix). We recommend to employ similar microservice architectures for the deployment of small- to large-scale robotic applications in order to accelerate development cycles, loosen functional dependence, and improve resiliency and elasticity. In order to facilitate involved DevOps processes, we present and release a tooling suite for automating the development of microservices for robotic applications based on the Robot Operating System (ROS). Our tooling suite covers the automated minimal containerization of ROS applications, a collection of useful machine learning-enabled base container images, as well as a CLI tool for simplified interaction with container images during the development phase. Within the scope of this paper, we embed our tooling suite into the overall context of streamlined robotics deployment and compare it to alternative solutions. We release our tools as open-source software at https://github.com/ika-rwth-aachen/dorotos."
+    },
+    {
+      "url": "https://arxiv.org/abs/2306.07035v1",
+      "title": "Stochastic Approach for Modeling a Soft Robotic Finger with Creep Behavior",
+      "snippet": "Soft robots have high adaptability and safeness which are derived from their softness, and therefore it is paid attention to use them in human society. However, the controllability of soft robots is not enough to perform dexterous behaviors when considering soft robots as alternative laborers for humans. The model-based control is effective to achieve dexterous behaviors. When considering building a model which is suitable for control, there are problems based on their special properties such as the creep behavior or the variability of motion. In this paper, the lumped parameterized model with viscoelastic joints for a soft finger is established for the creep behavior. Parameters are expressed as distributions, which makes it possible to take into account the variability of motion. Furthermore, stochastic analyses are performed based on the parameters' distribution. They show high adaptivity compared with experimental results and also enable the investigation of the effects of parameters for robots' variability."
+    },
+    {
+      "url": "https://arxiv.org/abs/2111.00944v2",
+      "title": "Piezoelectric Soft Robot Inchworm Motion by Tuning Ground Friction through Robot Shape: Quasi-Static Modeling and Experimental Validation",
+      "snippet": "Electrically-driven soft robots based on piezoelectric actuators may enable compact form factors and maneuverability in complex environments. In most prior work, piezoelectric actuators are used to control a single degree of freedom. In this work, the coordinated activation of five independent piezoelectric actuators, attached to a common metal foil, is used to implement inchworm-inspired crawling motion in a robot that is less than 0.5 mm thick. The motion is based on the control of its friction to the ground through the robot's shape, in which one end of the robot (depending on its shape) is anchored to the ground by static friction, while the rest of its body expands or contracts. A complete analytical model of the robot shape, which includes gravity, is developed to quantify the robot shape, friction, and displacement. After validation of the model by experiments, the robot's five actuators are collectively sequenced for inchworm-like forward and backward motion."
+    }
+  ],
   "search_status": {
-    "provider": "DuckDuckGo HTML",
+    "provider": "arXiv API fallback",
     "blocked": true,
-    "queries_attempted": 1,
-    "message": "DuckDuckGo returned a human verification challenge; search stopped"
+    "queries_attempted": 13,
+    "message": "DuckDuckGo returned a human verification challenge; fallback providers will be tried; Bing returned no relevant parseable search results; arXiv API fallback supplied results"
   },
-  "pages": [],
-  "claims": [],
+  "pages": [
+    {
+      "url": "https://arxiv.org/abs/2607.15330v2",
+      "title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+      "date_accessed": "2026-09-27T14:19:33+00:00",
+      "text": "We present Xiaomi-Robotics-1, a foundational vision-language-action (VLA) model capable of (1) following diverse language instructions to perform a wide range of mobile manipulation tasks in unseen environments out-of-the-box, and (2) efficiently adapting to novel downstream tasks with minimal fine-tuning data. We propose a two-stage training recipe consisting of pre-training and post-training. During pre-training, we imbue the model with broad and generalizable action-generation capabilities by training on over 100k hours of real-world manipulation trajectories collected via UMI devices. Crucially, we develop a scalable auto-labeling pipeline that annotates trajectory clips with natural languages describing scene state transitions, providing rich and precise conditioning for action learning. During post-training, we aim to align these capabilities with robot embodiments and imperative instructions that humans naturally use to prompt robots. Extensive experiments demonstrate strong scaling behavior. Xiaomi-Robotics-1 consistently improves with increased data scales and model sizes during pre-training. This scaling behavior directly transfers to post-training, where a stronger pre-training model yields better out-of-the-box real-robot performance in unseen environments. Furthermore, Xiaomi-Robotics-1 serves as a strong robot foundation policy that can be efficiently fine-tuned on complex, dexterous tasks with high data efficiency. Across multiple simulation benchmarks, Xiaomi-Robotics-1 outperforms state-of-the-art methods. Notably, it establishes a new state-of-the-art with a 57.4% success rate on RoboCasa365, surpassing the previous best of 46.6%. Furthermore, it achieves an average score of 20.07 on RoboDojo, significantly outperforming the prior state-of-the-art (13.07). Code and model checkpoints will be released. Project page: this https URL",
+      "status": "fetched"
+    },
+    {
+      "url": "https://arxiv.org/abs/2607.10797v1",
+      "title": "Compositional Context Fine-Tuning Vision-Language Model for Complex Assembly Action Understanding from Videos",
+      "date_accessed": "2026-09-27T14:19:34+00:00",
+      "text": "Assembly action understanding is a key enabler for effective human-robot collaborative assembly, yet it remains challenging due to subtle motions and fine-grained hand-object interactions. We adapt vision-language models (VLMs) to this challenging domain with Compositional Context Fine-Tuning (CCFT), a method that decomposes assembly actions into semantic elements (Verb, Object, Tool) and fine-tunes VLMs to recognize each action element using templated question-answering pairs. This approach ensures near-deterministic outputs. To enable efficient and effective multi-task learning under limited data, a Layer-Partitioned Alternating Training (LP-AT) method is presented, which assigns distinct model layers to recognize specific action elements through element-specific low-rank adapters. LP-AT alternates weight updates across element-specific adapters, reducing cross-task interference while enabling per-adapter hyperparameter optimization. Furthermore, we create HA-ViD-VQA and IKEA-ASM-VQA datasets from existing assembly video datasets. Extensive experiments on these datasets demonstrate that our method consistently outperforms strong action recognition baselines while providing interpretable element-level predictions that can support diverse downstream applications.",
+      "status": "fetched"
+    },
+    {
+      "url": "https://arxiv.org/abs/2307.15818v1",
+      "title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control",
+      "date_accessed": "2026-09-27T14:19:35+00:00",
+      "text": "We study how vision-language models trained on Internet-scale data can be incorporated directly into end-to-end robotic control to boost generalization and enable emergent semantic reasoning. Our goal is to enable a single end-to-end trained model to both learn to map robot observations to actions and enjoy the benefits of large-scale pretraining on language and vision-language data from the web. To this end, we propose to co-fine-tune state-of-the-art vision-language models on both robotic trajectory data and Internet-scale vision-language tasks, such as visual question answering. In contrast to other approaches, we propose a simple, general recipe to achieve this goal: in order to fit both natural language responses and robotic actions into the same format, we express the actions as text tokens and incorporate them directly into the training set of the model in the same way as natural language tokens. We refer to such category of models as vision-language-action models (VLA) and instantiate an example of such a model, which we call RT-2. Our extensive evaluation (6k evaluation trials) shows that our approach leads to performant robotic policies and enables RT-2 to obtain a range of emergent capabilities from Internet-scale training. This includes significantly improved generalization to novel objects, the ability to interpret commands not present in the robot training data (such as placing an object onto a particular number or icon), and the ability to perform rudimentary reasoning in response to user commands (such as picking up the smallest or largest object, or the one closest to another object). We further show that incorporating chain of thought reasoning allows RT-2 to perform multi-stage semantic reasoning, for example figuring out which object to pick up for use as an improvised hammer (a rock), or which type of drink is best suited for someone who is tired (an energy drink).",
+      "status": "fetched"
+    },
+    {
+      "url": "https://arxiv.org/abs/2505.20503v2",
+      "title": "Embodied AI with Foundation Models for Mobile Service Robots: A Systematic Review",
+      "date_accessed": "2026-09-27T14:19:36+00:00",
+      "text": "Rapid advancements in foundation models, including Large Language Models, Vision-Language Models, Multimodal Large Language Models, and Vision-Language-Action Models, have opened new avenues for embodied AI in mobile service robotics. By combining foundation models with the principles of embodied AI, where intelligent systems perceive, reason, and act through physical interaction, mobile service robots can achieve more flexible understanding, adaptive behavior, and robust task execution in dynamic real-world environments. Despite this progress, embodied AI for mobile service robots continues to face fundamental challenges related to the translation of natural language instructions into executable robot actions, multimodal perception in human-centered environments, uncertainty estimation for safe decision-making, and computational constraints for real-time onboard deployment. In this paper, we present the first systematic review focused specifically on the integration of foundation models in mobile service robotics. We analyze how recent advances in foundation models address these core challenges through language-conditioned control, multimodal sensor fusion, uncertainty-aware reasoning, and efficient model scaling. We further examine real-world applications in domestic assistance, healthcare, and service automation, highlighting how foundation models enable context-aware, socially responsive, and generalizable robot behaviors. Beyond technical considerations, we discuss ethical, societal, and human-interaction implications associated with deploying foundation model-enabled service robots in human environments. Finally, we outline future research directions emphasizing reliability and lifelong adaptation, privacy-aware and resource-constrained deployment, and governance and human-in-the-loop frameworks required for safe, scalable, and trustworthy mobile service robotics.",
+      "status": "fetched"
+    },
+    {
+      "url": "https://arxiv.org/abs/2504.18471v2",
+      "title": "Action Flow Matching for Continual Robot Learning",
+      "date_accessed": "2026-09-27T14:19:37+00:00",
+      "text": "Continual learning in robotics seeks systems that can constantly adapt to changing environments and tasks, mirroring human adaptability. A key challenge is refining dynamics models, essential for planning and control, while addressing issues such as safe adaptation, catastrophic forgetting, outlier management, data efficiency, and balancing exploration with exploitation -- all within task and onboard resource constraints. Towards this goal, we introduce a generative framework leveraging flow matching for online robot dynamics model alignment. Rather than executing actions based on a misaligned model, our approach refines planned actions to better match with those the robot would take if its model was well aligned. We find that by transforming the actions themselves rather than exploring with a misaligned model -- as is traditionally done -- the robot collects informative data more efficiently, thereby accelerating learning. Moreover, we validate that the method can handle an evolving and possibly imperfect model while reducing, if desired, the dependency on replay buffers or legacy model snapshots. We validate our approach using two platforms: an unmanned ground vehicle and a quadrotor. The results highlight the method's adaptability and efficiency, with a record 34.2\\% higher task success rate, demonstrating its potential towards enabling continual robot learning. Code: this https URL .",
+      "status": "fetched"
+    },
+    {
+      "url": "https://arxiv.org/abs/2602.03973v1",
+      "title": "VLS: Steering Pretrained Robot Policies via Vision-Language Models",
+      "date_accessed": "2026-09-27T14:19:38+00:00",
+      "text": "Why do pretrained diffusion or flow-matching policies fail when the same task is performed near an obstacle, on a shifted support surface, or amid mild clutter? Such failures rarely reflect missing motor skills; instead, they expose a limitation of imitation learning under train-test shifts, where action generation is tightly coupled to training-specific spatial configurations and task specifications. Retraining or fine-tuning to address these failures is costly and conceptually misaligned, as the required behaviors already exist but cannot be selectively adapted at test time. We propose Vision-Language Steering (VLS), a training-free framework for inference-time adaptation of frozen generative robot policies. VLS treats adaptation as an inference-time control problem, steering the sampling process of a pretrained diffusion or flow-matching policy in response to out-of-distribution observation-language inputs without modifying policy parameters. By leveraging vision-language models to synthesize trajectory-differentiable reward functions, VLS guides denoising toward action trajectories that satisfy test-time spatial and task requirements. Across simulation and real-world evaluations, VLS consistently outperforms prior steering methods, achieving a 31% improvement on CALVIN and a 13% gain on LIBERO-PRO. Real-world deployment on a Franka robot further demonstrates robust inference-time adaptation under test-time spatial and semantic shifts. Project page: this https URL",
+      "status": "fetched"
+    },
+    {
+      "url": "https://arxiv.org/abs/2603.03897v3",
+      "title": "IROSA: Interactive Robot Skill Adaptation using Natural Language",
+      "date_accessed": "2026-09-27T14:19:39+00:00",
+      "text": "Foundation models have demonstrated impressive capabilities across diverse domains, while imitation learning provides principled methods for robot skill adaptation from limited data. Combining these approaches holds significant promise for direct application to robotics, yet this combination has received limited attention, particularly for industrial deployment. We present a novel framework that enables open-vocabulary skill adaptation through a tool-based architecture, maintaining a protective abstraction layer between the language model and robot hardware. Our approach leverages pre-trained LLMs to select and parameterize specific tools for adapting robot skills without requiring fine-tuning or direct model-to-robot interaction. We demonstrate the framework on a 7-DoF torque-controlled robot performing an industrial bearing ring insertion task, showing successful skill adaptation through natural language commands for speed adjustment, trajectory correction, and obstacle avoidance while maintaining safety, transparency, and interpretability.",
+      "status": "fetched"
+    },
+    {
+      "url": "https://arxiv.org/abs/2309.06611v3",
+      "title": "Enabling the Deployment of Any-Scale Robotic Applications in Microservice Architectures through Automated Containerization",
+      "date_accessed": "2026-09-27T14:19:40+00:00",
+      "text": "In an increasingly automated world -- from warehouse robots to self-driving cars -- streamlining the development and deployment process and operations of robotic applications becomes ever more important. Automated DevOps processes and microservice architectures have already proven successful in other domains such as large-scale customer-oriented web services (e.g., Netflix). We recommend to employ similar microservice architectures for the deployment of small- to large-scale robotic applications in order to accelerate development cycles, loosen functional dependence, and improve resiliency and elasticity. In order to facilitate involved DevOps processes, we present and release a tooling suite for automating the development of microservices for robotic applications based on the Robot Operating System (ROS). Our tooling suite covers the automated minimal containerization of ROS applications, a collection of useful machine learning-enabled base container images, as well as a CLI tool for simplified interaction with container images during the development phase. Within the scope of this paper, we embed our tooling suite into the overall context of streamlined robotics deployment and compare it to alternative solutions. We release our tools as open-source software at this https URL .",
+      "status": "fetched"
+    },
+    {
+      "url": "https://arxiv.org/abs/2306.07035v1",
+      "title": "Stochastic Approach for Modeling a Soft Robotic Finger with Creep Behavior",
+      "date_accessed": "2026-09-27T14:19:41+00:00",
+      "text": "Soft robots have high adaptability and safeness which are derived from their softness, and therefore it is paid attention to use them in human society. However, the controllability of soft robots is not enough to perform dexterous behaviors when considering soft robots as alternative laborers for humans. The model-based control is effective to achieve dexterous behaviors. When considering building a model which is suitable for control, there are problems based on their special properties such as the creep behavior or the variability of motion. In this paper, the lumped parameterized model with viscoelastic joints for a soft finger is established for the creep behavior. Parameters are expressed as distributions, which makes it possible to take into account the variability of motion. Furthermore, stochastic analyses are performed based on the parameters' distribution. They show high adaptivity compared with experimental results and also enable the investigation of the effects of parameters for robots' variability.",
+      "status": "fetched"
+    },
+    {
+      "url": "https://arxiv.org/abs/2111.00944v2",
+      "title": "Piezoelectric Soft Robot Inchworm Motion by Tuning Ground Friction through Robot Shape: Quasi-Static Modeling and Experimental Validation",
+      "date_accessed": "2026-09-27T14:19:42+00:00",
+      "text": "Electrically-driven soft robots based on piezoelectric actuators may enable compact form factors and maneuverability in complex environments. In most prior work, piezoelectric actuators are used to control a single degree of freedom. In this work, the coordinated activation of five independent piezoelectric actuators, attached to a common metal foil, is used to implement inchworm-inspired crawling motion in a robot that is less than 0.5 mm thick. The motion is based on the control of its friction to the ground through the robot's shape, in which one end of the robot (depending on its shape) is anchored to the ground by static friction, while the rest of its body expands or contracts. A complete analytical model of the robot shape, which includes gravity, is developed to quantify the robot shape, friction, and displacement. After validation of the model by experiments, the robot's five actuators are collectively sequenced for inchworm-like forward and backward motion.",
+      "status": "fetched"
+    }
+  ],
+  "claims": [
+    {
+      "id": "E0001",
+      "text": "We present Xiaomi-Robotics-1, a foundational vision-language-action (VLA) model capable of (1) following diverse language instructions to perform a wide range of mobile manipulation tasks in unseen environments out-of-the-box, and (2) efficiently adapting to novel downstream tasks with minimal fine-tuning data.",
+      "source_url": "https://arxiv.org/abs/2607.15330v2",
+      "source_title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+      "date_accessed": "2026-09-27T14:19:33+00:00",
+      "quoted_snippet": "We present Xiaomi-Robotics-1, a foundational vision-language-action (VLA) model capable of (1) following diverse language instructions to perform a wide range of mobile manipulation tasks in unseen environments out-of-the-box, and (2) efficiently adapting to novel downstream tasks with minimal fine-tuning data.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0002",
+      "text": "We propose a two-stage training recipe consisting of pre-training and post-training.",
+      "source_url": "https://arxiv.org/abs/2607.15330v2",
+      "source_title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+      "date_accessed": "2026-09-27T14:19:33+00:00",
+      "quoted_snippet": "We propose a two-stage training recipe consisting of pre-training and post-training.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0003",
+      "text": "During pre-training, we imbue the model with broad and generalizable action-generation capabilities by training on over 100k hours of real-world manipulation trajectories collected via UMI devices.",
+      "source_url": "https://arxiv.org/abs/2607.15330v2",
+      "source_title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+      "date_accessed": "2026-09-27T14:19:33+00:00",
+      "quoted_snippet": "During pre-training, we imbue the model with broad and generalizable action-generation capabilities by training on over 100k hours of real-world manipulation trajectories collected via UMI devices.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0004",
+      "text": "Crucially, we develop a scalable auto-labeling pipeline that annotates trajectory clips with natural languages describing scene state transitions, providing rich and precise conditioning for action learning.",
+      "source_url": "https://arxiv.org/abs/2607.15330v2",
+      "source_title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+      "date_accessed": "2026-09-27T14:19:33+00:00",
+      "quoted_snippet": "Crucially, we develop a scalable auto-labeling pipeline that annotates trajectory clips with natural languages describing scene state transitions, providing rich and precise conditioning for action learning.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0005",
+      "text": "During post-training, we aim to align these capabilities with robot embodiments and imperative instructions that humans naturally use to prompt robots.",
+      "source_url": "https://arxiv.org/abs/2607.15330v2",
+      "source_title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+      "date_accessed": "2026-09-27T14:19:33+00:00",
+      "quoted_snippet": "During post-training, we aim to align these capabilities with robot embodiments and imperative instructions that humans naturally use to prompt robots.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0006",
+      "text": "Xiaomi-Robotics-1 consistently improves with increased data scales and model sizes during pre-training.",
+      "source_url": "https://arxiv.org/abs/2607.15330v2",
+      "source_title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+      "date_accessed": "2026-09-27T14:19:33+00:00",
+      "quoted_snippet": "Xiaomi-Robotics-1 consistently improves with increased data scales and model sizes during pre-training.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0007",
+      "text": "This scaling behavior directly transfers to post-training, where a stronger pre-training model yields better out-of-the-box real-robot performance in unseen environments.",
+      "source_url": "https://arxiv.org/abs/2607.15330v2",
+      "source_title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+      "date_accessed": "2026-09-27T14:19:33+00:00",
+      "quoted_snippet": "This scaling behavior directly transfers to post-training, where a stronger pre-training model yields better out-of-the-box real-robot performance in unseen environments.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0008",
+      "text": "Furthermore, Xiaomi-Robotics-1 serves as a strong robot foundation policy that can be efficiently fine-tuned on complex, dexterous tasks with high data efficiency.",
+      "source_url": "https://arxiv.org/abs/2607.15330v2",
+      "source_title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+      "date_accessed": "2026-09-27T14:19:33+00:00",
+      "quoted_snippet": "Furthermore, Xiaomi-Robotics-1 serves as a strong robot foundation policy that can be efficiently fine-tuned on complex, dexterous tasks with high data efficiency.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0009",
+      "text": "Across multiple simulation benchmarks, Xiaomi-Robotics-1 outperforms state-of-the-art methods.",
+      "source_url": "https://arxiv.org/abs/2607.15330v2",
+      "source_title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+      "date_accessed": "2026-09-27T14:19:33+00:00",
+      "quoted_snippet": "Across multiple simulation benchmarks, Xiaomi-Robotics-1 outperforms state-of-the-art methods.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0010",
+      "text": "Notably, it establishes a new state-of-the-art with a 57.4% success rate on RoboCasa365, surpassing the previous best of 46.6%.",
+      "source_url": "https://arxiv.org/abs/2607.15330v2",
+      "source_title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+      "date_accessed": "2026-09-27T14:19:33+00:00",
+      "quoted_snippet": "Notably, it establishes a new state-of-the-art with a 57.4% success rate on RoboCasa365, surpassing the previous best of 46.6%.",
+      "kind": "fact",
+      "numbers": [
+        {
+          "value": 57.4,
+          "unit": "%"
+        },
+        {
+          "value": 46.6,
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "E0011",
+      "text": "Furthermore, it achieves an average score of 20.07 on RoboDojo, significantly outperforming the prior state-of-the-art (13.07).",
+      "source_url": "https://arxiv.org/abs/2607.15330v2",
+      "source_title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+      "date_accessed": "2026-09-27T14:19:33+00:00",
+      "quoted_snippet": "Furthermore, it achieves an average score of 20.07 on RoboDojo, significantly outperforming the prior state-of-the-art (13.07).",
+      "kind": "fact",
+      "numbers": [
+        {
+          "value": 20.07,
+          "unit": "count"
+        },
+        {
+          "value": 13.07,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "E0012",
+      "text": "Assembly action understanding is a key enabler for effective human-robot collaborative assembly, yet it remains challenging due to subtle motions and fine-grained hand-object interactions.",
+      "source_url": "https://arxiv.org/abs/2607.10797v1",
+      "source_title": "Compositional Context Fine-Tuning Vision-Language Model for Complex Assembly Action Understanding from Videos",
+      "date_accessed": "2026-09-27T14:19:34+00:00",
+      "quoted_snippet": "Assembly action understanding is a key enabler for effective human-robot collaborative assembly, yet it remains challenging due to subtle motions and fine-grained hand-object interactions.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0013",
+      "text": "We adapt vision-language models (VLMs) to this challenging domain with Compositional Context Fine-Tuning (CCFT), a method that decomposes assembly actions into semantic elements (Verb, Object, Tool) and fine-tunes VLMs to recognize each action element using templated question-answering pairs.",
+      "source_url": "https://arxiv.org/abs/2607.10797v1",
+      "source_title": "Compositional Context Fine-Tuning Vision-Language Model for Complex Assembly Action Understanding from Videos",
+      "date_accessed": "2026-09-27T14:19:34+00:00",
+      "quoted_snippet": "We adapt vision-language models (VLMs) to this challenging domain with Compositional Context Fine-Tuning (CCFT), a method that decomposes assembly actions into semantic elements (Verb, Object, Tool) and fine-tunes VLMs to recognize each action element using templated question-answering pairs.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0014",
+      "text": "To enable efficient and effective multi-task learning under limited data, a Layer-Partitioned Alternating Training (LP-AT) method is presented, which assigns distinct model layers to recognize specific action elements through element-specific low-rank adapters.",
+      "source_url": "https://arxiv.org/abs/2607.10797v1",
+      "source_title": "Compositional Context Fine-Tuning Vision-Language Model for Complex Assembly Action Understanding from Videos",
+      "date_accessed": "2026-09-27T14:19:34+00:00",
+      "quoted_snippet": "To enable efficient and effective multi-task learning under limited data, a Layer-Partitioned Alternating Training (LP-AT) method is presented, which assigns distinct model layers to recognize specific action elements through element-specific low-rank adapters.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0015",
+      "text": "LP-AT alternates weight updates across element-specific adapters, reducing cross-task interference while enabling per-adapter hyperparameter optimization.",
+      "source_url": "https://arxiv.org/abs/2607.10797v1",
+      "source_title": "Compositional Context Fine-Tuning Vision-Language Model for Complex Assembly Action Understanding from Videos",
+      "date_accessed": "2026-09-27T14:19:34+00:00",
+      "quoted_snippet": "LP-AT alternates weight updates across element-specific adapters, reducing cross-task interference while enabling per-adapter hyperparameter optimization.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0016",
+      "text": "Furthermore, we create HA-ViD-VQA and IKEA-ASM-VQA datasets from existing assembly video datasets.",
+      "source_url": "https://arxiv.org/abs/2607.10797v1",
+      "source_title": "Compositional Context Fine-Tuning Vision-Language Model for Complex Assembly Action Understanding from Videos",
+      "date_accessed": "2026-09-27T14:19:34+00:00",
+      "quoted_snippet": "Furthermore, we create HA-ViD-VQA and IKEA-ASM-VQA datasets from existing assembly video datasets.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0017",
+      "text": "Extensive experiments on these datasets demonstrate that our method consistently outperforms strong action recognition baselines while providing interpretable element-level predictions that can support diverse downstream applications.",
+      "source_url": "https://arxiv.org/abs/2607.10797v1",
+      "source_title": "Compositional Context Fine-Tuning Vision-Language Model for Complex Assembly Action Understanding from Videos",
+      "date_accessed": "2026-09-27T14:19:34+00:00",
+      "quoted_snippet": "Extensive experiments on these datasets demonstrate that our method consistently outperforms strong action recognition baselines while providing interpretable element-level predictions that can support diverse downstream applications.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0018",
+      "text": "We study how vision-language models trained on Internet-scale data can be incorporated directly into end-to-end robotic control to boost generalization and enable emergent semantic reasoning.",
+      "source_url": "https://arxiv.org/abs/2307.15818v1",
+      "source_title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control",
+      "date_accessed": "2026-09-27T14:19:35+00:00",
+      "quoted_snippet": "We study how vision-language models trained on Internet-scale data can be incorporated directly into end-to-end robotic control to boost generalization and enable emergent semantic reasoning.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0019",
+      "text": "Our goal is to enable a single end-to-end trained model to both learn to map robot observations to actions and enjoy the benefits of large-scale pretraining on language and vision-language data from the web.",
+      "source_url": "https://arxiv.org/abs/2307.15818v1",
+      "source_title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control",
+      "date_accessed": "2026-09-27T14:19:35+00:00",
+      "quoted_snippet": "Our goal is to enable a single end-to-end trained model to both learn to map robot observations to actions and enjoy the benefits of large-scale pretraining on language and vision-language data from the web.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0020",
+      "text": "To this end, we propose to co-fine-tune state-of-the-art vision-language models on both robotic trajectory data and Internet-scale vision-language tasks, such as visual question answering.",
+      "source_url": "https://arxiv.org/abs/2307.15818v1",
+      "source_title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control",
+      "date_accessed": "2026-09-27T14:19:35+00:00",
+      "quoted_snippet": "To this end, we propose to co-fine-tune state-of-the-art vision-language models on both robotic trajectory data and Internet-scale vision-language tasks, such as visual question answering.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0021",
+      "text": "In contrast to other approaches, we propose a simple, general recipe to achieve this goal: in order to fit both natural language responses and robotic actions into the same format, we express the actions as text tokens and incorporate them directly into the training set of the model in the same way as natural language tokens.",
+      "source_url": "https://arxiv.org/abs/2307.15818v1",
+      "source_title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control",
+      "date_accessed": "2026-09-27T14:19:35+00:00",
+      "quoted_snippet": "In contrast to other approaches, we propose a simple, general recipe to achieve this goal: in order to fit both natural language responses and robotic actions into the same format, we express the actions as text tokens and incorporate them directly into the training set of the model in the same way as natural language tokens.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0022",
+      "text": "We refer to such category of models as vision-language-action models (VLA) and instantiate an example of such a model, which we call RT-2.",
+      "source_url": "https://arxiv.org/abs/2307.15818v1",
+      "source_title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control",
+      "date_accessed": "2026-09-27T14:19:35+00:00",
+      "quoted_snippet": "We refer to such category of models as vision-language-action models (VLA) and instantiate an example of such a model, which we call RT-2.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0023",
+      "text": "Our extensive evaluation (6k evaluation trials) shows that our approach leads to performant robotic policies and enables RT-2 to obtain a range of emergent capabilities from Internet-scale training.",
+      "source_url": "https://arxiv.org/abs/2307.15818v1",
+      "source_title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control",
+      "date_accessed": "2026-09-27T14:19:35+00:00",
+      "quoted_snippet": "Our extensive evaluation (6k evaluation trials) shows that our approach leads to performant robotic policies and enables RT-2 to obtain a range of emergent capabilities from Internet-scale training.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0024",
+      "text": "This includes significantly improved generalization to novel objects, the ability to interpret commands not present in the robot training data (such as placing an object onto a particular number or icon), and the ability to perform rudimentary reasoning in response to user commands (such as picking up the smallest or largest object, or the one closest to another object).",
+      "source_url": "https://arxiv.org/abs/2307.15818v1",
+      "source_title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control",
+      "date_accessed": "2026-09-27T14:19:35+00:00",
+      "quoted_snippet": "This includes significantly improved generalization to novel objects, the ability to interpret commands not present in the robot training data (such as placing an object onto a particular number or icon), and the ability to perform rudimentary reasoning in response to user commands (such as picking up the smallest or largest object, or the one closest to another object).",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0025",
+      "text": "We further show that incorporating chain of thought reasoning allows RT-2 to perform multi-stage semantic reasoning, for example figuring out which object to pick up for use as an improvised hammer (a rock), or which type of drink is best suited for someone who is tired (an energy drink).",
+      "source_url": "https://arxiv.org/abs/2307.15818v1",
+      "source_title": "RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control",
+      "date_accessed": "2026-09-27T14:19:35+00:00",
+      "quoted_snippet": "We further show that incorporating chain of thought reasoning allows RT-2 to perform multi-stage semantic reasoning, for example figuring out which object to pick up for use as an improvised hammer (a rock), or which type of drink is best suited for someone who is tired (an energy drink).",
+      "kind": "opinion",
+      "numbers": []
+    },
+    {
+      "id": "E0026",
+      "text": "Rapid advancements in foundation models, including Large Language Models, Vision-Language Models, Multimodal Large Language Models, and Vision-Language-Action Models, have opened new avenues for embodied AI in mobile service robotics.",
+      "source_url": "https://arxiv.org/abs/2505.20503v2",
+      "source_title": "Embodied AI with Foundation Models for Mobile Service Robots: A Systematic Review",
+      "date_accessed": "2026-09-27T14:19:36+00:00",
+      "quoted_snippet": "Rapid advancements in foundation models, including Large Language Models, Vision-Language Models, Multimodal Large Language Models, and Vision-Language-Action Models, have opened new avenues for embodied AI in mobile service robotics.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0027",
+      "text": "By combining foundation models with the principles of embodied AI, where intelligent systems perceive, reason, and act through physical interaction, mobile service robots can achieve more flexible understanding, adaptive behavior, and robust task execution in dynamic real-world environments.",
+      "source_url": "https://arxiv.org/abs/2505.20503v2",
+      "source_title": "Embodied AI with Foundation Models for Mobile Service Robots: A Systematic Review",
+      "date_accessed": "2026-09-27T14:19:36+00:00",
+      "quoted_snippet": "By combining foundation models with the principles of embodied AI, where intelligent systems perceive, reason, and act through physical interaction, mobile service robots can achieve more flexible understanding, adaptive behavior, and robust task execution in dynamic real-world environments.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0028",
+      "text": "Despite this progress, embodied AI for mobile service robots continues to face fundamental challenges related to the translation of natural language instructions into executable robot actions, multimodal perception in human-centered environments, uncertainty estimation for safe decision-making, and computational constraints for real-time onboard deployment.",
+      "source_url": "https://arxiv.org/abs/2505.20503v2",
+      "source_title": "Embodied AI with Foundation Models for Mobile Service Robots: A Systematic Review",
+      "date_accessed": "2026-09-27T14:19:36+00:00",
+      "quoted_snippet": "Despite this progress, embodied AI for mobile service robots continues to face fundamental challenges related to the translation of natural language instructions into executable robot actions, multimodal perception in human-centered environments, uncertainty estimation for safe decision-making, and computational constraints for real-time onboard deployment.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0029",
+      "text": "In this paper, we present the first systematic review focused specifically on the integration of foundation models in mobile service robotics.",
+      "source_url": "https://arxiv.org/abs/2505.20503v2",
+      "source_title": "Embodied AI with Foundation Models for Mobile Service Robots: A Systematic Review",
+      "date_accessed": "2026-09-27T14:19:36+00:00",
+      "quoted_snippet": "In this paper, we present the first systematic review focused specifically on the integration of foundation models in mobile service robotics.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0030",
+      "text": "We analyze how recent advances in foundation models address these core challenges through language-conditioned control, multimodal sensor fusion, uncertainty-aware reasoning, and efficient model scaling.",
+      "source_url": "https://arxiv.org/abs/2505.20503v2",
+      "source_title": "Embodied AI with Foundation Models for Mobile Service Robots: A Systematic Review",
+      "date_accessed": "2026-09-27T14:19:36+00:00",
+      "quoted_snippet": "We analyze how recent advances in foundation models address these core challenges through language-conditioned control, multimodal sensor fusion, uncertainty-aware reasoning, and efficient model scaling.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0031",
+      "text": "We further examine real-world applications in domestic assistance, healthcare, and service automation, highlighting how foundation models enable context-aware, socially responsive, and generalizable robot behaviors.",
+      "source_url": "https://arxiv.org/abs/2505.20503v2",
+      "source_title": "Embodied AI with Foundation Models for Mobile Service Robots: A Systematic Review",
+      "date_accessed": "2026-09-27T14:19:36+00:00",
+      "quoted_snippet": "We further examine real-world applications in domestic assistance, healthcare, and service automation, highlighting how foundation models enable context-aware, socially responsive, and generalizable robot behaviors.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0032",
+      "text": "Beyond technical considerations, we discuss ethical, societal, and human-interaction implications associated with deploying foundation model-enabled service robots in human environments.",
+      "source_url": "https://arxiv.org/abs/2505.20503v2",
+      "source_title": "Embodied AI with Foundation Models for Mobile Service Robots: A Systematic Review",
+      "date_accessed": "2026-09-27T14:19:36+00:00",
+      "quoted_snippet": "Beyond technical considerations, we discuss ethical, societal, and human-interaction implications associated with deploying foundation model-enabled service robots in human environments.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0033",
+      "text": "Finally, we outline future research directions emphasizing reliability and lifelong adaptation, privacy-aware and resource-constrained deployment, and governance and human-in-the-loop frameworks required for safe, scalable, and trustworthy mobile service robotics.",
+      "source_url": "https://arxiv.org/abs/2505.20503v2",
+      "source_title": "Embodied AI with Foundation Models for Mobile Service Robots: A Systematic Review",
+      "date_accessed": "2026-09-27T14:19:36+00:00",
+      "quoted_snippet": "Finally, we outline future research directions emphasizing reliability and lifelong adaptation, privacy-aware and resource-constrained deployment, and governance and human-in-the-loop frameworks required for safe, scalable, and trustworthy mobile service robotics.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0034",
+      "text": "Continual learning in robotics seeks systems that can constantly adapt to changing environments and tasks, mirroring human adaptability.",
+      "source_url": "https://arxiv.org/abs/2504.18471v2",
+      "source_title": "Action Flow Matching for Continual Robot Learning",
+      "date_accessed": "2026-09-27T14:19:37+00:00",
+      "quoted_snippet": "Continual learning in robotics seeks systems that can constantly adapt to changing environments and tasks, mirroring human adaptability.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0035",
+      "text": "A key challenge is refining dynamics models, essential for planning and control, while addressing issues such as safe adaptation, catastrophic forgetting, outlier management, data efficiency, and balancing exploration with exploitation -- all within task and onboard resource constraints.",
+      "source_url": "https://arxiv.org/abs/2504.18471v2",
+      "source_title": "Action Flow Matching for Continual Robot Learning",
+      "date_accessed": "2026-09-27T14:19:37+00:00",
+      "quoted_snippet": "A key challenge is refining dynamics models, essential for planning and control, while addressing issues such as safe adaptation, catastrophic forgetting, outlier management, data efficiency, and balancing exploration with exploitation -- all within task and onboard resource constraints.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0036",
+      "text": "Towards this goal, we introduce a generative framework leveraging flow matching for online robot dynamics model alignment.",
+      "source_url": "https://arxiv.org/abs/2504.18471v2",
+      "source_title": "Action Flow Matching for Continual Robot Learning",
+      "date_accessed": "2026-09-27T14:19:37+00:00",
+      "quoted_snippet": "Towards this goal, we introduce a generative framework leveraging flow matching for online robot dynamics model alignment.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0037",
+      "text": "Rather than executing actions based on a misaligned model, our approach refines planned actions to better match with those the robot would take if its model was well aligned.",
+      "source_url": "https://arxiv.org/abs/2504.18471v2",
+      "source_title": "Action Flow Matching for Continual Robot Learning",
+      "date_accessed": "2026-09-27T14:19:37+00:00",
+      "quoted_snippet": "Rather than executing actions based on a misaligned model, our approach refines planned actions to better match with those the robot would take if its model was well aligned.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0038",
+      "text": "We find that by transforming the actions themselves rather than exploring with a misaligned model -- as is traditionally done -- the robot collects informative data more efficiently, thereby accelerating learning.",
+      "source_url": "https://arxiv.org/abs/2504.18471v2",
+      "source_title": "Action Flow Matching for Continual Robot Learning",
+      "date_accessed": "2026-09-27T14:19:37+00:00",
+      "quoted_snippet": "We find that by transforming the actions themselves rather than exploring with a misaligned model -- as is traditionally done -- the robot collects informative data more efficiently, thereby accelerating learning.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0039",
+      "text": "Moreover, we validate that the method can handle an evolving and possibly imperfect model while reducing, if desired, the dependency on replay buffers or legacy model snapshots.",
+      "source_url": "https://arxiv.org/abs/2504.18471v2",
+      "source_title": "Action Flow Matching for Continual Robot Learning",
+      "date_accessed": "2026-09-27T14:19:37+00:00",
+      "quoted_snippet": "Moreover, we validate that the method can handle an evolving and possibly imperfect model while reducing, if desired, the dependency on replay buffers or legacy model snapshots.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0040",
+      "text": "We validate our approach using two platforms: an unmanned ground vehicle and a quadrotor.",
+      "source_url": "https://arxiv.org/abs/2504.18471v2",
+      "source_title": "Action Flow Matching for Continual Robot Learning",
+      "date_accessed": "2026-09-27T14:19:37+00:00",
+      "quoted_snippet": "We validate our approach using two platforms: an unmanned ground vehicle and a quadrotor.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0041",
+      "text": "The results highlight the method's adaptability and efficiency, with a record 34.2\\% higher task success rate, demonstrating its potential towards enabling continual robot learning.",
+      "source_url": "https://arxiv.org/abs/2504.18471v2",
+      "source_title": "Action Flow Matching for Continual Robot Learning",
+      "date_accessed": "2026-09-27T14:19:37+00:00",
+      "quoted_snippet": "The results highlight the method's adaptability and efficiency, with a record 34.2\\% higher task success rate, demonstrating its potential towards enabling continual robot learning.",
+      "kind": "fact",
+      "numbers": [
+        {
+          "value": 34.2,
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "E0042",
+      "text": "Why do pretrained diffusion or flow-matching policies fail when the same task is performed near an obstacle, on a shifted support surface, or amid mild clutter?",
+      "source_url": "https://arxiv.org/abs/2602.03973v1",
+      "source_title": "VLS: Steering Pretrained Robot Policies via Vision-Language Models",
+      "date_accessed": "2026-09-27T14:19:38+00:00",
+      "quoted_snippet": "Why do pretrained diffusion or flow-matching policies fail when the same task is performed near an obstacle, on a shifted support surface, or amid mild clutter?",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0043",
+      "text": "Such failures rarely reflect missing motor skills; instead, they expose a limitation of imitation learning under train-test shifts, where action generation is tightly coupled to training-specific spatial configurations and task specifications.",
+      "source_url": "https://arxiv.org/abs/2602.03973v1",
+      "source_title": "VLS: Steering Pretrained Robot Policies via Vision-Language Models",
+      "date_accessed": "2026-09-27T14:19:38+00:00",
+      "quoted_snippet": "Such failures rarely reflect missing motor skills; instead, they expose a limitation of imitation learning under train-test shifts, where action generation is tightly coupled to training-specific spatial configurations and task specifications.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0044",
+      "text": "Retraining or fine-tuning to address these failures is costly and conceptually misaligned, as the required behaviors already exist but cannot be selectively adapted at test time.",
+      "source_url": "https://arxiv.org/abs/2602.03973v1",
+      "source_title": "VLS: Steering Pretrained Robot Policies via Vision-Language Models",
+      "date_accessed": "2026-09-27T14:19:38+00:00",
+      "quoted_snippet": "Retraining or fine-tuning to address these failures is costly and conceptually misaligned, as the required behaviors already exist but cannot be selectively adapted at test time.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0045",
+      "text": "We propose Vision-Language Steering (VLS), a training-free framework for inference-time adaptation of frozen generative robot policies.",
+      "source_url": "https://arxiv.org/abs/2602.03973v1",
+      "source_title": "VLS: Steering Pretrained Robot Policies via Vision-Language Models",
+      "date_accessed": "2026-09-27T14:19:38+00:00",
+      "quoted_snippet": "We propose Vision-Language Steering (VLS), a training-free framework for inference-time adaptation of frozen generative robot policies.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0046",
+      "text": "VLS treats adaptation as an inference-time control problem, steering the sampling process of a pretrained diffusion or flow-matching policy in response to out-of-distribution observation-language inputs without modifying policy parameters.",
+      "source_url": "https://arxiv.org/abs/2602.03973v1",
+      "source_title": "VLS: Steering Pretrained Robot Policies via Vision-Language Models",
+      "date_accessed": "2026-09-27T14:19:38+00:00",
+      "quoted_snippet": "VLS treats adaptation as an inference-time control problem, steering the sampling process of a pretrained diffusion or flow-matching policy in response to out-of-distribution observation-language inputs without modifying policy parameters.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0047",
+      "text": "By leveraging vision-language models to synthesize trajectory-differentiable reward functions, VLS guides denoising toward action trajectories that satisfy test-time spatial and task requirements.",
+      "source_url": "https://arxiv.org/abs/2602.03973v1",
+      "source_title": "VLS: Steering Pretrained Robot Policies via Vision-Language Models",
+      "date_accessed": "2026-09-27T14:19:38+00:00",
+      "quoted_snippet": "By leveraging vision-language models to synthesize trajectory-differentiable reward functions, VLS guides denoising toward action trajectories that satisfy test-time spatial and task requirements.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0048",
+      "text": "Across simulation and real-world evaluations, VLS consistently outperforms prior steering methods, achieving a 31% improvement on CALVIN and a 13% gain on LIBERO-PRO.",
+      "source_url": "https://arxiv.org/abs/2602.03973v1",
+      "source_title": "VLS: Steering Pretrained Robot Policies via Vision-Language Models",
+      "date_accessed": "2026-09-27T14:19:38+00:00",
+      "quoted_snippet": "Across simulation and real-world evaluations, VLS consistently outperforms prior steering methods, achieving a 31% improvement on CALVIN and a 13% gain on LIBERO-PRO.",
+      "kind": "fact",
+      "numbers": [
+        {
+          "value": 31,
+          "unit": "%"
+        },
+        {
+          "value": 13,
+          "unit": "%"
+        }
+      ]
+    },
+    {
+      "id": "E0049",
+      "text": "Real-world deployment on a Franka robot further demonstrates robust inference-time adaptation under test-time spatial and semantic shifts.",
+      "source_url": "https://arxiv.org/abs/2602.03973v1",
+      "source_title": "VLS: Steering Pretrained Robot Policies via Vision-Language Models",
+      "date_accessed": "2026-09-27T14:19:38+00:00",
+      "quoted_snippet": "Real-world deployment on a Franka robot further demonstrates robust inference-time adaptation under test-time spatial and semantic shifts.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0050",
+      "text": "Foundation models have demonstrated impressive capabilities across diverse domains, while imitation learning provides principled methods for robot skill adaptation from limited data.",
+      "source_url": "https://arxiv.org/abs/2603.03897v3",
+      "source_title": "IROSA: Interactive Robot Skill Adaptation using Natural Language",
+      "date_accessed": "2026-09-27T14:19:39+00:00",
+      "quoted_snippet": "Foundation models have demonstrated impressive capabilities across diverse domains, while imitation learning provides principled methods for robot skill adaptation from limited data.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0051",
+      "text": "Combining these approaches holds significant promise for direct application to robotics, yet this combination has received limited attention, particularly for industrial deployment.",
+      "source_url": "https://arxiv.org/abs/2603.03897v3",
+      "source_title": "IROSA: Interactive Robot Skill Adaptation using Natural Language",
+      "date_accessed": "2026-09-27T14:19:39+00:00",
+      "quoted_snippet": "Combining these approaches holds significant promise for direct application to robotics, yet this combination has received limited attention, particularly for industrial deployment.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0052",
+      "text": "We present a novel framework that enables open-vocabulary skill adaptation through a tool-based architecture, maintaining a protective abstraction layer between the language model and robot hardware.",
+      "source_url": "https://arxiv.org/abs/2603.03897v3",
+      "source_title": "IROSA: Interactive Robot Skill Adaptation using Natural Language",
+      "date_accessed": "2026-09-27T14:19:39+00:00",
+      "quoted_snippet": "We present a novel framework that enables open-vocabulary skill adaptation through a tool-based architecture, maintaining a protective abstraction layer between the language model and robot hardware.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0053",
+      "text": "Our approach leverages pre-trained LLMs to select and parameterize specific tools for adapting robot skills without requiring fine-tuning or direct model-to-robot interaction.",
+      "source_url": "https://arxiv.org/abs/2603.03897v3",
+      "source_title": "IROSA: Interactive Robot Skill Adaptation using Natural Language",
+      "date_accessed": "2026-09-27T14:19:39+00:00",
+      "quoted_snippet": "Our approach leverages pre-trained LLMs to select and parameterize specific tools for adapting robot skills without requiring fine-tuning or direct model-to-robot interaction.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0054",
+      "text": "We demonstrate the framework on a 7-DoF torque-controlled robot performing an industrial bearing ring insertion task, showing successful skill adaptation through natural language commands for speed adjustment, trajectory correction, and obstacle avoidance while maintaining safety, transparency, and interpretability.",
+      "source_url": "https://arxiv.org/abs/2603.03897v3",
+      "source_title": "IROSA: Interactive Robot Skill Adaptation using Natural Language",
+      "date_accessed": "2026-09-27T14:19:39+00:00",
+      "quoted_snippet": "We demonstrate the framework on a 7-DoF torque-controlled robot performing an industrial bearing ring insertion task, showing successful skill adaptation through natural language commands for speed adjustment, trajectory correction, and obstacle avoidance while maintaining safety, transparency, and interpretability.",
+      "kind": "fact",
+      "numbers": [
+        {
+          "value": 7,
+          "unit": "DoF"
+        }
+      ]
+    },
+    {
+      "id": "E0055",
+      "text": "In an increasingly automated world -- from warehouse robots to self-driving cars -- streamlining the development and deployment process and operations of robotic applications becomes ever more important.",
+      "source_url": "https://arxiv.org/abs/2309.06611v3",
+      "source_title": "Enabling the Deployment of Any-Scale Robotic Applications in Microservice Architectures through Automated Containerization",
+      "date_accessed": "2026-09-27T14:19:40+00:00",
+      "quoted_snippet": "In an increasingly automated world -- from warehouse robots to self-driving cars -- streamlining the development and deployment process and operations of robotic applications becomes ever more important.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0056",
+      "text": "Automated DevOps processes and microservice architectures have already proven successful in other domains such as large-scale customer-oriented web services (e.g., Netflix).",
+      "source_url": "https://arxiv.org/abs/2309.06611v3",
+      "source_title": "Enabling the Deployment of Any-Scale Robotic Applications in Microservice Architectures through Automated Containerization",
+      "date_accessed": "2026-09-27T14:19:40+00:00",
+      "quoted_snippet": "Automated DevOps processes and microservice architectures have already proven successful in other domains such as large-scale customer-oriented web services (e.g., Netflix).",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0057",
+      "text": "We recommend to employ similar microservice architectures for the deployment of small- to large-scale robotic applications in order to accelerate development cycles, loosen functional dependence, and improve resiliency and elasticity.",
+      "source_url": "https://arxiv.org/abs/2309.06611v3",
+      "source_title": "Enabling the Deployment of Any-Scale Robotic Applications in Microservice Architectures through Automated Containerization",
+      "date_accessed": "2026-09-27T14:19:40+00:00",
+      "quoted_snippet": "We recommend to employ similar microservice architectures for the deployment of small- to large-scale robotic applications in order to accelerate development cycles, loosen functional dependence, and improve resiliency and elasticity.",
+      "kind": "opinion",
+      "numbers": []
+    },
+    {
+      "id": "E0058",
+      "text": "In order to facilitate involved DevOps processes, we present and release a tooling suite for automating the development of microservices for robotic applications based on the Robot Operating System (ROS).",
+      "source_url": "https://arxiv.org/abs/2309.06611v3",
+      "source_title": "Enabling the Deployment of Any-Scale Robotic Applications in Microservice Architectures through Automated Containerization",
+      "date_accessed": "2026-09-27T14:19:40+00:00",
+      "quoted_snippet": "In order to facilitate involved DevOps processes, we present and release a tooling suite for automating the development of microservices for robotic applications based on the Robot Operating System (ROS).",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0059",
+      "text": "Our tooling suite covers the automated minimal containerization of ROS applications, a collection of useful machine learning-enabled base container images, as well as a CLI tool for simplified interaction with container images during the development phase.",
+      "source_url": "https://arxiv.org/abs/2309.06611v3",
+      "source_title": "Enabling the Deployment of Any-Scale Robotic Applications in Microservice Architectures through Automated Containerization",
+      "date_accessed": "2026-09-27T14:19:40+00:00",
+      "quoted_snippet": "Our tooling suite covers the automated minimal containerization of ROS applications, a collection of useful machine learning-enabled base container images, as well as a CLI tool for simplified interaction with container images during the development phase.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0060",
+      "text": "Within the scope of this paper, we embed our tooling suite into the overall context of streamlined robotics deployment and compare it to alternative solutions.",
+      "source_url": "https://arxiv.org/abs/2309.06611v3",
+      "source_title": "Enabling the Deployment of Any-Scale Robotic Applications in Microservice Architectures through Automated Containerization",
+      "date_accessed": "2026-09-27T14:19:40+00:00",
+      "quoted_snippet": "Within the scope of this paper, we embed our tooling suite into the overall context of streamlined robotics deployment and compare it to alternative solutions.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0061",
+      "text": "We release our tools as open-source software at this https URL .",
+      "source_url": "https://arxiv.org/abs/2309.06611v3",
+      "source_title": "Enabling the Deployment of Any-Scale Robotic Applications in Microservice Architectures through Automated Containerization",
+      "date_accessed": "2026-09-27T14:19:40+00:00",
+      "quoted_snippet": "We release our tools as open-source software at this https URL .",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0062",
+      "text": "Soft robots have high adaptability and safeness which are derived from their softness, and therefore it is paid attention to use them in human society.",
+      "source_url": "https://arxiv.org/abs/2306.07035v1",
+      "source_title": "Stochastic Approach for Modeling a Soft Robotic Finger with Creep Behavior",
+      "date_accessed": "2026-09-27T14:19:41+00:00",
+      "quoted_snippet": "Soft robots have high adaptability and safeness which are derived from their softness, and therefore it is paid attention to use them in human society.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0063",
+      "text": "However, the controllability of soft robots is not enough to perform dexterous behaviors when considering soft robots as alternative laborers for humans.",
+      "source_url": "https://arxiv.org/abs/2306.07035v1",
+      "source_title": "Stochastic Approach for Modeling a Soft Robotic Finger with Creep Behavior",
+      "date_accessed": "2026-09-27T14:19:41+00:00",
+      "quoted_snippet": "However, the controllability of soft robots is not enough to perform dexterous behaviors when considering soft robots as alternative laborers for humans.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0064",
+      "text": "The model-based control is effective to achieve dexterous behaviors.",
+      "source_url": "https://arxiv.org/abs/2306.07035v1",
+      "source_title": "Stochastic Approach for Modeling a Soft Robotic Finger with Creep Behavior",
+      "date_accessed": "2026-09-27T14:19:41+00:00",
+      "quoted_snippet": "The model-based control is effective to achieve dexterous behaviors.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0065",
+      "text": "When considering building a model which is suitable for control, there are problems based on their special properties such as the creep behavior or the variability of motion.",
+      "source_url": "https://arxiv.org/abs/2306.07035v1",
+      "source_title": "Stochastic Approach for Modeling a Soft Robotic Finger with Creep Behavior",
+      "date_accessed": "2026-09-27T14:19:41+00:00",
+      "quoted_snippet": "When considering building a model which is suitable for control, there are problems based on their special properties such as the creep behavior or the variability of motion.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0066",
+      "text": "In this paper, the lumped parameterized model with viscoelastic joints for a soft finger is established for the creep behavior.",
+      "source_url": "https://arxiv.org/abs/2306.07035v1",
+      "source_title": "Stochastic Approach for Modeling a Soft Robotic Finger with Creep Behavior",
+      "date_accessed": "2026-09-27T14:19:41+00:00",
+      "quoted_snippet": "In this paper, the lumped parameterized model with viscoelastic joints for a soft finger is established for the creep behavior.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0067",
+      "text": "Parameters are expressed as distributions, which makes it possible to take into account the variability of motion.",
+      "source_url": "https://arxiv.org/abs/2306.07035v1",
+      "source_title": "Stochastic Approach for Modeling a Soft Robotic Finger with Creep Behavior",
+      "date_accessed": "2026-09-27T14:19:41+00:00",
+      "quoted_snippet": "Parameters are expressed as distributions, which makes it possible to take into account the variability of motion.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0068",
+      "text": "Furthermore, stochastic analyses are performed based on the parameters' distribution.",
+      "source_url": "https://arxiv.org/abs/2306.07035v1",
+      "source_title": "Stochastic Approach for Modeling a Soft Robotic Finger with Creep Behavior",
+      "date_accessed": "2026-09-27T14:19:41+00:00",
+      "quoted_snippet": "Furthermore, stochastic analyses are performed based on the parameters' distribution.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0069",
+      "text": "They show high adaptivity compared with experimental results and also enable the investigation of the effects of parameters for robots' variability.",
+      "source_url": "https://arxiv.org/abs/2306.07035v1",
+      "source_title": "Stochastic Approach for Modeling a Soft Robotic Finger with Creep Behavior",
+      "date_accessed": "2026-09-27T14:19:41+00:00",
+      "quoted_snippet": "They show high adaptivity compared with experimental results and also enable the investigation of the effects of parameters for robots' variability.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0070",
+      "text": "Electrically-driven soft robots based on piezoelectric actuators may enable compact form factors and maneuverability in complex environments.",
+      "source_url": "https://arxiv.org/abs/2111.00944v2",
+      "source_title": "Piezoelectric Soft Robot Inchworm Motion by Tuning Ground Friction through Robot Shape: Quasi-Static Modeling and Experimental Validation",
+      "date_accessed": "2026-09-27T14:19:42+00:00",
+      "quoted_snippet": "Electrically-driven soft robots based on piezoelectric actuators may enable compact form factors and maneuverability in complex environments.",
+      "kind": "inference",
+      "numbers": []
+    },
+    {
+      "id": "E0071",
+      "text": "In most prior work, piezoelectric actuators are used to control a single degree of freedom.",
+      "source_url": "https://arxiv.org/abs/2111.00944v2",
+      "source_title": "Piezoelectric Soft Robot Inchworm Motion by Tuning Ground Friction through Robot Shape: Quasi-Static Modeling and Experimental Validation",
+      "date_accessed": "2026-09-27T14:19:42+00:00",
+      "quoted_snippet": "In most prior work, piezoelectric actuators are used to control a single degree of freedom.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0072",
+      "text": "In this work, the coordinated activation of five independent piezoelectric actuators, attached to a common metal foil, is used to implement inchworm-inspired crawling motion in a robot that is less than 0.5 mm thick.",
+      "source_url": "https://arxiv.org/abs/2111.00944v2",
+      "source_title": "Piezoelectric Soft Robot Inchworm Motion by Tuning Ground Friction through Robot Shape: Quasi-Static Modeling and Experimental Validation",
+      "date_accessed": "2026-09-27T14:19:42+00:00",
+      "quoted_snippet": "In this work, the coordinated activation of five independent piezoelectric actuators, attached to a common metal foil, is used to implement inchworm-inspired crawling motion in a robot that is less than 0.5 mm thick.",
+      "kind": "fact",
+      "numbers": [
+        {
+          "value": 0.5,
+          "unit": "count"
+        }
+      ]
+    },
+    {
+      "id": "E0073",
+      "text": "The motion is based on the control of its friction to the ground through the robot's shape, in which one end of the robot (depending on its shape) is anchored to the ground by static friction, while the rest of its body expands or contracts.",
+      "source_url": "https://arxiv.org/abs/2111.00944v2",
+      "source_title": "Piezoelectric Soft Robot Inchworm Motion by Tuning Ground Friction through Robot Shape: Quasi-Static Modeling and Experimental Validation",
+      "date_accessed": "2026-09-27T14:19:42+00:00",
+      "quoted_snippet": "The motion is based on the control of its friction to the ground through the robot's shape, in which one end of the robot (depending on its shape) is anchored to the ground by static friction, while the rest of its body expands or contracts.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0074",
+      "text": "A complete analytical model of the robot shape, which includes gravity, is developed to quantify the robot shape, friction, and displacement.",
+      "source_url": "https://arxiv.org/abs/2111.00944v2",
+      "source_title": "Piezoelectric Soft Robot Inchworm Motion by Tuning Ground Friction through Robot Shape: Quasi-Static Modeling and Experimental Validation",
+      "date_accessed": "2026-09-27T14:19:42+00:00",
+      "quoted_snippet": "A complete analytical model of the robot shape, which includes gravity, is developed to quantify the robot shape, friction, and displacement.",
+      "kind": "fact",
+      "numbers": []
+    },
+    {
+      "id": "E0075",
+      "text": "After validation of the model by experiments, the robot's five actuators are collectively sequenced for inchworm-like forward and backward motion.",
+      "source_url": "https://arxiv.org/abs/2111.00944v2",
+      "source_title": "Piezoelectric Soft Robot Inchworm Motion by Tuning Ground Friction through Robot Shape: Quasi-Static Modeling and Experimental Validation",
+      "date_accessed": "2026-09-27T14:19:42+00:00",
+      "quoted_snippet": "After validation of the model by experiments, the robot's five actuators are collectively sequenced for inchworm-like forward and backward motion.",
+      "kind": "fact",
+      "numbers": []
+    }
+  ],
   "analysis": {
     "contradictions": [],
-    "quantification": [],
+    "quantification": [
+      {
+        "claim_id": "E0010",
+        "value": 57.4,
+        "unit": "%",
+        "claim": "Notably, it establishes a new state-of-the-art with a 57.4% success rate on RoboCasa365, surpassing the previous best of 46.6%.",
+        "source_title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+        "source_url": "https://arxiv.org/abs/2607.15330v2"
+      },
+      {
+        "claim_id": "E0010",
+        "value": 46.6,
+        "unit": "%",
+        "claim": "Notably, it establishes a new state-of-the-art with a 57.4% success rate on RoboCasa365, surpassing the previous best of 46.6%.",
+        "source_title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+        "source_url": "https://arxiv.org/abs/2607.15330v2"
+      },
+      {
+        "claim_id": "E0011",
+        "value": 20.07,
+        "unit": "count",
+        "claim": "Furthermore, it achieves an average score of 20.07 on RoboDojo, significantly outperforming the prior state-of-the-art (13.07).",
+        "source_title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+        "source_url": "https://arxiv.org/abs/2607.15330v2"
+      },
+      {
+        "claim_id": "E0011",
+        "value": 13.07,
+        "unit": "count",
+        "claim": "Furthermore, it achieves an average score of 20.07 on RoboDojo, significantly outperforming the prior state-of-the-art (13.07).",
+        "source_title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+        "source_url": "https://arxiv.org/abs/2607.15330v2"
+      },
+      {
+        "claim_id": "E0041",
+        "value": 34.2,
+        "unit": "%",
+        "claim": "The results highlight the method's adaptability and efficiency, with a record 34.2\\% higher task success rate, demonstrating its potential towards enabling continual robot learning.",
+        "source_title": "Action Flow Matching for Continual Robot Learning",
+        "source_url": "https://arxiv.org/abs/2504.18471v2"
+      },
+      {
+        "claim_id": "E0048",
+        "value": 31,
+        "unit": "%",
+        "claim": "Across simulation and real-world evaluations, VLS consistently outperforms prior steering methods, achieving a 31% improvement on CALVIN and a 13% gain on LIBERO-PRO.",
+        "source_title": "VLS: Steering Pretrained Robot Policies via Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2602.03973v1"
+      },
+      {
+        "claim_id": "E0048",
+        "value": 13,
+        "unit": "%",
+        "claim": "Across simulation and real-world evaluations, VLS consistently outperforms prior steering methods, achieving a 31% improvement on CALVIN and a 13% gain on LIBERO-PRO.",
+        "source_title": "VLS: Steering Pretrained Robot Policies via Vision-Language Models",
+        "source_url": "https://arxiv.org/abs/2602.03973v1"
+      },
+      {
+        "claim_id": "E0054",
+        "value": 7,
+        "unit": "DoF",
+        "claim": "We demonstrate the framework on a 7-DoF torque-controlled robot performing an industrial bearing ring insertion task, showing successful skill adaptation through natural language commands for speed adjustment, trajectory correction, and obstacle avoidance while maintaining safety, transparency, and interpretability.",
+        "source_title": "IROSA: Interactive Robot Skill Adaptation using Natural Language",
+        "source_url": "https://arxiv.org/abs/2603.03897v3"
+      },
+      {
+        "claim_id": "E0072",
+        "value": 0.5,
+        "unit": "count",
+        "claim": "In this work, the coordinated activation of five independent piezoelectric actuators, attached to a common metal foil, is used to implement inchworm-inspired crawling motion in a robot that is less than 0.5 mm thick.",
+        "source_title": "Piezoelectric Soft Robot Inchworm Motion by Tuning Ground Friction through Robot Shape: Quasi-Static Modeling and Experimental Validation",
+        "source_url": "https://arxiv.org/abs/2111.00944v2"
+      }
+    ],
     "scenarios": [
       {
         "name": "Base case",
-        "narrative": "Analysis: no source claims were retrieved, so this run cannot support a base view of model cost, performance, or reliability.",
-        "supporting_evidence_ids": []
+        "narrative": "Analysis: the retrieved claims do not settle the choice, so an incremental decision with measured pilots is a reasonable base case.",
+        "supporting_evidence_ids": [
+          "E0001",
+          "E0002",
+          "E0003",
+          "E0004",
+          "E0005"
+        ]
       },
       {
         "name": "Capability upside",
         "narrative": "Analysis: in this scenario, relevant model capability and adaptation tooling improve enough to make a more ambitious in-house or fine-tuning path practical.",
-        "supporting_evidence_ids": []
+        "supporting_evidence_ids": [
+          "E0001",
+          "E0002",
+          "E0003",
+          "E0004",
+          "E0005"
+        ]
       },
       {
         "name": "Constraint downside",
         "narrative": "Analysis: in this scenario, cost, talent, reliability, access, or policy constraints make dependence on a single approach harder to sustain.",
-        "supporting_evidence_ids": []
+        "supporting_evidence_ids": [
+          "E0001",
+          "E0002",
+          "E0003",
+          "E0004",
+          "E0005"
+        ]
       }
     ],
     "option_coverage": [
@@ -148,6 +1154,6 @@
       }
     ]
   },
-  "chart": "evidence_coverage.png",
-  "chart_kind": "run_coverage"
+  "chart": "quantified_evidence.png",
+  "chart_kind": "quantified_evidence"
 }

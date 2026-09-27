@@ -13,7 +13,7 @@ from .decompose import decompose
 from .evidence import extract_claims
 from .fetch import PageFetcher
 from .report import make_brief, make_report
-from .search import DuckDuckGoHTML, search_many
+from .search import ArxivAPI, BingHTML, DuckDuckGoHTML, search_many
 from .store import save_store
 
 
@@ -28,7 +28,15 @@ def build_run(question: str, output_dir: Path, max_searches: int = 6, max_pages:
     decomposition = decompose(question)
     search_plan = decomposition["search_queries"][:max_searches]
     provider = DuckDuckGoHTML()
-    search_results = search_many(provider, search_plan, per_query=6, max_total=max(12, max_pages * 3))
+    fallback = BingHTML()
+    research_fallback = ArxivAPI()
+    search_results = search_many(
+        provider,
+        search_plan,
+        per_query=6,
+        max_total=max(12, max_pages * 3),
+        fallback_providers=[fallback, research_fallback],
+    )
     fetcher = PageFetcher()
     pages = fetcher.fetch_many(search_results, limit=max_pages)
     claims = extract_claims(pages)
@@ -40,7 +48,25 @@ def build_run(question: str, output_dir: Path, max_searches: int = 6, max_pages:
         "run_date": now.isoformat(),
         "decomposition": decomposition,
         "search_results": [r.to_dict() for r in search_results],
-        "search_status": {"provider": "DuckDuckGo HTML", "blocked": provider.blocked, "queries_attempted": provider.queries_attempted, "message": provider.last_error},
+        "search_status": {
+            "provider": ", ".join(
+                name for name, instance in (
+                    ("DuckDuckGo HTML", provider),
+                    ("Bing HTML fallback", fallback),
+                    ("arXiv API fallback", research_fallback),
+                )
+                if getattr(instance, "used", False)
+            ) or "DuckDuckGo HTML, Bing HTML fallback, arXiv API fallback",
+            "blocked": provider.blocked,
+            "queries_attempted": provider.queries_attempted + fallback.queries_attempted + research_fallback.queries_attempted,
+            "message": "; ".join(
+                message for message in (
+                    provider.last_error,
+                    fallback.last_error,
+                    "arXiv API fallback supplied results" if getattr(research_fallback, "used", False) else research_fallback.last_error,
+                ) if message
+            ),
+        },
         "pages": [page.to_dict() for page in pages],
         "claims": claims,
         "analysis": analysis,
