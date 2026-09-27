@@ -1,0 +1,61 @@
+{
+  "question": "Should a European robotics startup build its own vision-language-action model, fine-tune an existing model, or rely on external models over the next three years?",
+  "decision": "Should a European robotics startup build its own vision-language-action model, fine-tune an existing model, or rely on external models over the next three years",
+  "options": [
+    "build its own vision-language-action model",
+    "fine-tune an existing model",
+    "rely on external models"
+  ],
+  "time_horizon": "next three years",
+  "geography": "Europe",
+  "key_uncertainties": [
+    "Total cost, talent, compute, and time required for each option",
+    "Task performance, reliability, and safety in the intended deployment setting",
+    "Availability and durability of external model access, licensing, and vendor support",
+    "How quickly relevant models and hardware capabilities will change"
+  ],
+  "subquestions": [
+    "Evidence on build its own vision-language-action model",
+    "Risks and constraints for build its own vision-language-action model",
+    "Evidence on fine-tune an existing model",
+    "Risks and constraints for fine-tune an existing model",
+    "Evidence on rely on external models",
+    "Risks and constraints for rely on external models",
+    "Comparative economics and model-building tradeoffs",
+    "European policy and deployment context"
+  ],
+  "search_queries": [
+    {
+      "subquestion": "Evidence on build its own vision-language-action model",
+      "query": "build its own vision-language-action model european robotics startup build own vision-language-action model fine-tune cost performance robotics model"
+    },
+    {
+      "subquestion": "Risks and constraints for build its own vision-language-action model",
+      "query": "build its own vision-language-action model risks licensing deployment robotics AI model"
+    },
+    {
+      "subquestion": "Evidence on fine-tune an existing model",
+      "query": "fine-tune an existing model european robotics startup build own vision-language-action model fine-tune cost performance robotics model"
+    },
+    {
+      "subquestion": "Risks and constraints for fine-tune an existing model",
+      "query": "fine-tune an existing model risks licensing deployment robotics AI model"
+    },
+    {
+      "subquestion": "Evidence on rely on external models",
+      "query": "rely on external models european robotics startup build own vision-language-action model fine-tune cost performance robotics model"
+    },
+    {
+      "subquestion": "Risks and constraints for rely on external models",
+      "query": "rely on external models risks licensing deployment robotics AI model"
+    },
+    {
+      "subquestion": "Comparative economics and model-building tradeoffs",
+      "query": "robotics foundation model build vs fine tune cost research"
+    },
+    {
+      "subquestion": "European policy and deployment context",
+      "query": "Europe robotics AI model regulation industry adoption next three years"
+    }
+  ]
+}

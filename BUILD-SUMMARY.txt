@@ -1,0 +1,12 @@
+Atlas build summary
+
+Tests: 4 passed with `py -3.12 -m pytest`.
+
+The live worked-example run parsed the three alternatives, Europe, and the next-three-years horizon. DuckDuckGo returned a human verification challenge on the first query, so Atlas stopped the search without fetching pages. The run therefore concluded that there is insufficient evidence to recommend building, fine-tuning, or relying on external models. It contains zero source citations because no source pages were fetched, and its coverage chart records the blocked search rather than research findings.
+
+Sample outputs:
+- `examples/vla-robotics/brief.md`
+- `examples/vla-robotics/report.md`
+- `examples/vla-robotics/evidence.json`
+- `examples/vla-robotics/decomposition.json`
+- `examples/vla-robotics/evidence_coverage.png`
